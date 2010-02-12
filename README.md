@@ -1,3 +1,9 @@
+CodeIgniter Installer
+======================
+
+General Information
+--------------------
+
 CI Installer is a staring point for giving your downloadable CodeIgniter
 app an installer.
 
@@ -10,7 +16,9 @@ little to make it perfect for your app, and you might have to dig into the code
 a little bit. It's pretty simple, so if you have a basic understanding of PHP
 you shouldn't have trouble.
 
-General Instructions:
+General Instructions
+---------------------
+
 - Download CI Installer, rename the folder to 'install' and put it in the root
 directory of your CI install (as a sibling to the /system folder).
 - Make a SQL dump of your desired database structure and data and paste it into
@@ -24,5 +32,5 @@ instead of a child (this is common), then do a find/replace to replace
 - Now try visiting http://yoursite.com/install and see how it goes.
 
 If you have problems or have recommendations, please file an issue at
-http://bitbucket.org/mcrittenden/ci-installer/
+http://github.com/mikecrittenden/ci-installer/
 
