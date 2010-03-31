@@ -32,5 +32,4 @@ instead of a child (this is common), then do a find/replace to replace
 - Now try visiting http://yoursite.com/install and see how it goes.
 
 If you have problems or have recommendations, please file an issue at
-http://github.com/mikecrittenden/ci-installer/
-
+http://github.com/mikecrittenden/ci-installer/ or else it won't get fixed!
