@@ -37,4 +37,4 @@ to:
 - Visit http://example.com/path/to/yourapp/install and see how it goes.
 
 If you have problems or have recommendations, please file an issue at
-http://github.com/mikecrittenden/ci-installer/ or else it won't get fixed!
+https://github.com/collb/codeigniter-installer/issues
