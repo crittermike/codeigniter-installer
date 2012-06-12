@@ -43,5 +43,3 @@ class Database {
 		return true;
 	}
 }
-?>
-
