@@ -54,4 +54,4 @@ $active_group = "default";
 $active_record = TRUE;
 
 /* End of file database.php */
-/* Location: ./system/application/config/database.php */
+/* Location: ./application/config/database.php */

@@ -27,6 +27,11 @@ it into assets/install.sql
 4. If your CI application folder is a sibling of your system folder instead of a 
 child (this is common), do a find/replace to replace 'system/application' with 
 'application' in each of this project's files.
+5. If you have .htaccess file in CodeIgniter root folder, change the line:
+	RewriteCond $1 !^(index\.php|img|css|js|robots\.txt|favicon\.ico|update\.php|install\.php)
+to:
+	RewriteCond $1 !^(index\.php|img|css|js|install|robots\.txt|favicon\.ico|update\.php)
+	
 - In index.php, around line 37 change 'welcome' to the URL of the page
 (in CodeIgniter) that you want the user to be redirected to after installing.
 - Visit http://example.com/path/to/yourapp/install and see how it goes.
