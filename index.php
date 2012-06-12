@@ -1,8 +1,8 @@
 <?php
 
-error_reporting(E_NONE);
+error_reporting(E_NONE); //Setting this to E_ALL showed that that cause of not redirecting were few blank lines added in some php files.
 
-$db_config_path = '../system/application/config/database.php';
+$db_config_path = '../application/config/database.php';
 
 // Only load the classes in case the user submitted the form
 if($_POST) {
@@ -25,7 +25,7 @@ if($_POST) {
 		} else if ($database->create_tables($_POST) == false) {
 			$message = $core->show_message('error',"The database tables could not be created, please verify your settings.");
 		} else if ($core->write_config($_POST) == false) {
-			$message = $core->show_message('error',"The database configuration file could not be written, please chmod /application/config/database.php file to 777");
+			$message = $core->show_message('error',"The database configuration file could not be written, please chmod application/config/database.php file to 777");
 		}
 
 		// If no errors, redirect to registration page
@@ -33,7 +33,7 @@ if($_POST) {
 		  $redir = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
       $redir .= "://".$_SERVER['HTTP_HOST'];
       $redir .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-      $redir = str_replace('install/','',$redir);
+      $redir = str_replace('install/','',$redir); 
 			header( 'Location: ' . $redir . 'welcome' ) ;
 		}
 
@@ -62,7 +62,8 @@ if($_POST) {
 		    display: block;
 		    font-size: 18px;
 		    margin: 0;
-		    padding: 0;
+		    padding: 10px;
+		    border-radius:10px;
 		  }
 		  label {
 		    margin-top: 20px;
@@ -76,6 +77,7 @@ if($_POST) {
 		  }
 		  fieldset {
 		    padding: 15px;
+		    border-radius:10px;
 		  }
 		  legend {
 		    font-size: 18px;
@@ -90,8 +92,8 @@ if($_POST) {
 	</head>
 	<body>
 
-    <h1>Install</h1>
-    <?php if(is_writable($db_config_path)):?>
+    <center><h1>Install</h1></center>
+    <?php if(is_writable($db_config_path)){?>
 
 		  <?php if(isset($message)) {echo '<p class="error">' . $message . '</p>';}?>
 
@@ -106,10 +108,9 @@ if($_POST) {
         </fieldset>
 		  </form>
 
-	  <?php else: ?>
-      <p class="error">Please make the /system/application/config/database.php file writable. <strong>Example</strong>:<br /><br /><code>chmod 777 system/application/config/database.php</code></p>
-	  <?php endif; ?>
+	  <?php } else { ?>
+      <p class="error">Please make the application/config/database.php file writable. <strong>Example</strong>:<br /><br /><code>chmod 777 application/config/database.php</code></p>
+	  <?php } ?>
 
 	</body>
 </html>
-
