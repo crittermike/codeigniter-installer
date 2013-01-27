@@ -1,4 +1,4 @@
-THIS CODE IS RELEASED UNDER [THE UNLICENSE](http://unlucense.org)
+THIS CODE IS RELEASED UNDER [THE UNLICENSE](http://unlicense.org)
 ----------------------------------------------------------------------
 
 **This is free and unencumbered software released into the public domain.**
