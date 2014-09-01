@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_NONE); //Setting this to E_ALL showed that that cause of not redirecting were few blank lines added in some php files.
+error_reporting(0); //Setting this to E_ALL showed that that cause of not redirecting were few blank lines added in some php files.
 
 $db_config_path = '../application/config/database.php';
 
